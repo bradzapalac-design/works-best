@@ -7,7 +7,9 @@ describe("parseBackup", () => {
     const result = parseBackup(createSeedData());
     expect(result.ok).toBe(true);
     if (result.ok) {
-      expect(result.data.themes).toHaveLength(5);
+      expect(result.data.themes).toHaveLength(6);
+      expect(result.data.themes.map((theme) => theme.name)).toContain("SonicWall - VP");
+      expect(result.data.themes.map((theme) => theme.name)).toContain("Work / Career");
       expect(result.data.objectives.length).toBeGreaterThan(0);
     }
   });

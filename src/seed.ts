@@ -1,3 +1,4 @@
+import { createSonicWallVpTheme } from "./lib/builtinThemes";
 import { newId, nowIso } from "./lib/ids";
 import type { AppData, Objective, Theme } from "./types";
 
@@ -65,6 +66,7 @@ export function createSeedData(): AppData {
     icon: "home",
     order: 4,
   });
+  const sonicWall = createSonicWallVpTheme(5, STAMP);
 
   const objectives: Objective[] = [
     objective({
@@ -197,7 +199,7 @@ export function createSeedData(): AppData {
 
   return {
     version: 1,
-    themes: [family, health, money, work, home],
+    themes: [family, health, money, work, home, sonicWall],
     objectives,
     activities: [
       {

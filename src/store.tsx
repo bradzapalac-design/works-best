@@ -7,6 +7,7 @@ import {
   useReducer,
   type ReactNode,
 } from "react";
+import { ensureBuiltinThemes } from "./lib/builtinThemes";
 import { newId, nowIso } from "./lib/ids";
 import { createSeedData } from "./seed";
 import { loadData, saveData, clearData, downloadBackup } from "./storage";
@@ -45,7 +46,7 @@ function stamp(): { updatedAt: string } {
 function reducer(state: AppData, action: Action): AppData {
   switch (action.type) {
     case "replace":
-      return action.data;
+      return ensureBuiltinThemes(action.data);
     case "setHorizon":
       return { ...state, ui: { ...state.ui, lastHorizon: action.horizon } };
     case "addTheme":

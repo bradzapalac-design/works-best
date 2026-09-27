@@ -12,7 +12,7 @@ Data stays in this browser (`localStorage`). Export a JSON backup if you want it
 | --- | --- | --- |
 | Role | North stars for areas of life | Concrete outcomes under a theme |
 | Cadence | Rarely change; add / rename / archive / reorder | Change with the week, month, or year |
-| Examples | Family, Health, Money / Investments, Work / Career, Home | “Move four days this week”, “Family spending review”, “Put a trip on the calendar” |
+| Examples | Family, Health, Money / Investments, Work / Career, Home, SonicWall - VP | “Move four days this week”, “Family spending review”, “Put a trip on the calendar” |
 | Fields | Name, short description, color, icon | Title, notes, horizon, status, optional metric, optional due date, priority |
 
 A theme scorecard on the dashboard is the roll-up of that theme’s objectives **for the selected horizon**. Parked items are left out of the score.
@@ -47,7 +47,7 @@ Requires Node.js 20+.
 3. **Activity** — recent check-ins.
 4. **Data** — export JSON, import a backup (replaces current data), or reset to the sample workspace.
 
-First launch seeds five themes and a light set of sample objectives so the board is not blank. Sample data is illustrative only — it does not include private account balances.
+First launch seeds six themes and a light set of sample objectives so the board is not blank. Sample data is illustrative only — it does not include private account balances. A browser that already has saved data keeps that data; SonicWall - VP is added alongside the existing themes, and nothing already filed under Work / Career is moved.
 
 ## Backup format
 
