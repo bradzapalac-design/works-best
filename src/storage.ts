@@ -1,3 +1,4 @@
+import { ensureBuiltinThemes } from "./lib/builtinThemes";
 import { createSeedData } from "./seed";
 import { STORAGE_KEY, type AppData } from "./types";
 import { parseBackupJson } from "./lib/validate";
@@ -11,7 +12,7 @@ export function loadData(): AppData {
     console.warn("Works Best: stored data could not be read, reseeding.", parsed.error);
     return createSeedData();
   }
-  return parsed.data;
+  return ensureBuiltinThemes(parsed.data);
 }
 
 export function saveData(data: AppData): void {
